@@ -8,7 +8,8 @@ function UMG_Main_C:Construct()
 end
 
 function UMG_Main_C:OnClicked_ExitButton()
-	UE.UKismetSystemLibrary.ExecuteConsoleCommand(self, "exit")
+	UE.UTutorialBlueprintFunctionLibrary.PrintAllLuaTable()
+	-- UE.UKismetSystemLibrary.ExecuteConsoleCommand(self, "exit")
 end
 
 return UMG_Main_C

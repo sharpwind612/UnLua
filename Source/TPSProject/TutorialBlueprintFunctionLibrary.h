@@ -17,4 +17,8 @@ class TPSPROJECT_API UTutorialBlueprintFunctionLibrary : public UBlueprintFuncti
 
     UFUNCTION(BlueprintCallable, meta = (DisplayName = "SetupCustomLoader", Category = "UnLua Tutorial"))
     static void SetupCustomLoader(int Index);
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "PrintAllLuaTable", Category = "UnLua Tutorial"))
+	static void PrintAllLuaTable();
 };
+

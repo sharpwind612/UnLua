@@ -487,6 +487,13 @@ struct lua_Debug {
   struct CallInfo *i_ci;  /* active function */
 };
 
+typedef void (*TableSizeReport) (const void* p, int size);
+typedef void (*ObjectRelationshipReport) (const void* parent, const void* child, int type, const char* key, double d, const char* key2);
+
+LUA_API void xlua_report_table_size(lua_State* L, TableSizeReport cb, int fast);
+LUA_API void xlua_report_object_relationship(lua_State* L, ObjectRelationshipReport cb);
+LUA_API void* xlua_registry_pointer(lua_State* L);
+LUA_API void* xlua_global_pointer(lua_State* L);
 /* }====================================================================== */
 
 
